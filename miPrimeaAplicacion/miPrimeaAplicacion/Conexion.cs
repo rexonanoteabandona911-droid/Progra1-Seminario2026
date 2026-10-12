@@ -25,8 +25,12 @@ namespace miPrimeaAplicacion {
             objComando.Connection = objConexion;//Establcer la conexion para ejecutar consultas a la BD
 
             objDataAdapter.SelectCommand = objComando;
+
             objComando.CommandText = "SELECT * FROM alumnos";
             objDataAdapter.Fill(objDs, "alumnos"); //tomamos los datos de la BD y llenamos el ds
+
+            objComando.CommandText = "SELECT * FROM materias";
+            objDataAdapter.Fill(objDs, "materias");
 
             return objDs;
         }

@@ -28,5 +28,19 @@ namespace miPrimeaAplicacion
             objAlumnos.MdiParent = this;
             objAlumnos.Show();
         }
+
+        private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMaterias objMateria = new frmMaterias();
+            objMateria.MdiParent = this;
+            objMateria.Show();
+        }
+
+        private void periodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPeriodos objPeriodo = new frmPeriodos();
+            objPeriodo.MdiParent = this;
+            objPeriodo.Show();
+        }
     }
 }

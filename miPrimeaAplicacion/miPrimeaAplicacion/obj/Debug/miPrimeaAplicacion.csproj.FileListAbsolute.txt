@@ -23,3 +23,6 @@ C:\Users\Luis Hernandez\Desktop\PrograI-Semi-2026\miPrimeaAplicacion\miPrimeaApl
 C:\Users\Luis Hernandez\Desktop\PrograI-Semi-2026\miPrimeaAplicacion\miPrimeaAplicacion\obj\Debug\miPrimeaAplicacion.exe
 C:\Users\Luis Hernandez\Desktop\PrograI-Semi-2026\miPrimeaAplicacion\miPrimeaAplicacion\obj\Debug\miPrimeaAplicacion.pdb
 D:\Users\Estudiante\Desktop\PrograI-Semi-2026\miPrimeaAplicacion\miPrimeaAplicacion\obj\Debug\miPrimeaAplicacion.frmPrincipal.resources
+C:\Users\Luis Hernandez\Desktop\PrograI-Semi-2026\miPrimeaAplicacion\miPrimeaAplicacion\obj\Debug\miPrimeaAplicacion.frmPrincipal.resources
+C:\Users\Luis Hernandez\Desktop\PrograI-Semi-2026\miPrimeaAplicacion\miPrimeaAplicacion\obj\Debug\miPrimeaAplicacion.frmMaterias.resources
+C:\Users\Luis Hernandez\Desktop\PrograI-Semi-2026\miPrimeaAplicacion\miPrimeaAplicacion\obj\Debug\miPrimeaAplicacion.frmPeriodos.resources
