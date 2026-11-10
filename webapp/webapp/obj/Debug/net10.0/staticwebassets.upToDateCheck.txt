@@ -1,3 +1,7 @@
-wwwroot\views\index.html
 wwwroot\img\logo.webp
-D:\Users\Estudiante\Desktop\PrograI-Semi-2026\webapp\webapp\wwwroot\views\index.html
+wwwroot\views\alumno.html
+wwwroot\views\app.js
+wwwroot\views\index.html
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\alumno.html
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\app.js
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\index.html
