@@ -3,6 +3,7 @@
         <div class="card-header">
             <div class="d-flex">
                 Administracion de Alumnos
+
                 <div class="ms-auto">
                     <button data-ng-form="alumno" type="button" class="btn-close" aria-label="Close"></button>
                 </div>
@@ -43,7 +44,7 @@
         <div class="card-footer fg-2">
             <div class="col-12 text-center">
                 <input type="submit" class="btn btn-outline-primary" value="Guardar" />
-                <input type="reset" class="btn btn-outline-warning" value="Nuevo" />
+                <input type="reset" class="btn btn-outline-warnig" value="Nuevo" />
                 <input type="button" class="btn btn-outline-success" value="Buscar" />
             </div>
         </div>
@@ -56,12 +57,6 @@
         e.preventDefault();
         guardarAlumno();
     });
-    document.querySelector('input[type="reset"]').addEventListener('click', () => {
-        accion = 'nuevo';
-        idAlumno = 0;
-        frmAlumno.reset();
-    });
-
     async function guardarAlumno() {
         let datos = {
             codigo: txtCodigoAlumno.value,
@@ -69,35 +64,18 @@
             direccion: txtDireccionAlumno.value,
             telefono: txtTelefonoAlumno.value,
             email: txtEmailAlumno.value,
-        };
-
-        let url = 'https://localhost:44312/api/Alumnos';
-        let method = 'POST';
-
-        if (accion === 'modificar') {
+        },
+            url = 'https://localhost:44312/api/Alumnos',
+            method = 'POST';
+        if (accion == 'modificar') {
             method = 'PUT';
-            url = `https://localhost:44312/api/Alumnos/${idAlumno}`;
+            url = `https://localhost:44312/api/Alumnos\${idAlumno}`;
             datos.idAlumno = idAlumno;
         }
-
-        try {
-            const respuesta = await fetch(url, {
-                method,
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(datos)
-            });
-
-            if (respuesta.ok) {
-                alertify.success(accion === 'nuevo' ? "Alumno registrado con éxito" : "Alumno modificado con éxito");
-                frmAlumno.reset();
-                accion = 'nuevo';
-                idAlumno = 0;
-            } else {
-                alertify.error("Ocurrió un error al procesar los datos.");
-            }
-        } catch (error) {
-            console.error("Error de conexión:", error);
-            alertify.error("No se pudo conectar con el servidor.");
-        }
+        const respuesta = await fetch(url, {
+            method,
+            header: { "Content-Type": "application/json" },
+            body: JSON.stringify(datos)
+        }), alumnos = await respuesta.json();
     }
 </script>

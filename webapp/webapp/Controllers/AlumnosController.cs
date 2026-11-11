@@ -4,10 +4,10 @@ using webapp.Models;
 
 [Route("api/[controller]")]
 [ApiController]
-public class AlumnoesController : ControllerBase
+public class AlumnosController : ControllerBase
 {
     private readonly MyDbContext _context;
-    public AlumnoesController(MyDbContext context)
+    public AlumnosController(MyDbContext context)
     {
         _context = context;
     }
@@ -17,6 +17,17 @@ public class AlumnoesController : ControllerBase
     public async Task<ActionResult<IEnumerable<Alumno>>> GetAlumno()
     {
         return await _context.Alumnos.ToListAsync();
+    }
+    //GET: api/Alumno/buscar
+    [HttpGet("buscar")]
+    public async Task<ActionResult<IEnumerable<Alumno>>> BuscarAlumno([FromQuery]AlumnoBusquedaParametros parametros)
+    {
+        var consulta = _context.Alumnos.AsQueryable();
+        if (!string.IsNullOrEmpty(parametros.buscar))
+        {
+            consulta = consulta.Where(alumno => alumno.nombre.Contains(parametros.buscar));
+        }
+        return await consulta.ToListAsync();
     }
 
     // GET: api/Alumno/5

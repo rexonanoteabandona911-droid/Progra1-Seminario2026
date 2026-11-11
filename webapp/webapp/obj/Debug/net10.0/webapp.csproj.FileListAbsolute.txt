@@ -334,10 +334,11 @@ C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\scopedcss\bundle\webapp.styles.css
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\90ckkcozmt-{0}-hbxp78vwan-hbxp78vwan.gz
-C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\8yla8kepi5-{0}-ti38gscz0l-ti38gscz0l.gz
-C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\uy7f9d0jbq-{0}-fpnlpvhy26-fpnlpvhy26.gz
-C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\p0vihavs68-{0}-mze219uj5p-mze219uj5p.gz
-C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\s03rj8uvkt-{0}-s05wcr6ztp-s05wcr6ztp.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\8yla8kepi5-{0}-rhwz9akz10-rhwz9akz10.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\uy7f9d0jbq-{0}-mllcak6t6a-mllcak6t6a.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\p0vihavs68-{0}-2xrqqmfpgu-2xrqqmfpgu.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\1obysjw2lk-{0}-bkuhxxlm1l-bkuhxxlm1l.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\s03rj8uvkt-{0}-lapv2lwsqg-lapv2lwsqg.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\jd7zh339gb-{0}-pmpabpnd9a-pmpabpnd9a.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\rgxlyx6pje-{0}-o299wl1apk-o299wl1apk.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\staticwebassets.build.json

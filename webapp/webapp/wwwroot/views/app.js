@@ -1,42 +1,34 @@
 ﻿var formActivo = "";
-
 document.addEventListener("DOMContentLoaded", e => {
-    let mnxAcademica = document.getElementById("mnxAcademica");
-    if (mnxAcademica) {
-        mnxAcademica.addEventListener("click", event => {
-            event.preventDefault();
-            let form = event.target.dataset.form;
-            if (form) {
-                abrirVentana(form);
-            }
-        });
-    }
+    mnxAcademica.addEventListener("click", event => {
+        event.preventDefault();
+        abrirVentana(event.target.dataset.form);
+    });
 });
 
 function abrirVentana(form) {
-    let $ventana = $(`#${form}`); // #alumno, #materia, #docente, etc.
+    let $ventana = $(`#${form}`); //#alumno, #materia, #docente, etc.
     if ($ventana.find("form").length > 0) {
         $ventana.show();
     } else {
         let url = `/views/${form}.html`;
-        fetch(url)
-            .then(resp => {
-                if (!resp.ok) throw new Error("No se pudo cargar la vista");
-                return resp.text();
-            })
-            .then(vista => {
-                $ventana.html(vista).draggable();
-                $ventana.show();
-            })
-            .catch(error => console.error("Error:", error));
+        fetch(url).then(resp => resp.text()).then(vista => {
+            $ventana.html(vista).draggable();
+            cerrarVentana();
+        });
     }
 }
-$(document).on('click', '.btn-close', function (e) {
-    e.preventDefault();
-    let formName = $(this).data('form') || $(this).closest('.position-absolute').attr('id');
-    if (formName) {
-        $(`#${formName}`).hide();
-    } else {
-        $(this).closest('.position-absolute').hide();
-    }
-});
+function cerrarVentana() {
+    $('.btn-close').click(e => {
+        $(`#${e.target.dataset.form}`).hidden();
+    });
+}
+
+async function obtenerAlumnos(buscar = '') {
+    const respuesta = await fetch(`api/Alumnos/buscar?buscar?=${buscar}`, {
+        method: "GET",
+        header: { "Content-Type": "application/json" }
+    }),
+        alumnos = await respuesta.json();
+    return alumnos;
+}
