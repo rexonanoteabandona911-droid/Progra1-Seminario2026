@@ -45,7 +45,7 @@
             <div class="col-12 text-center">
                 <input type="submit" class="btn btn-outline-primary" value="Guardar" />
                 <input type="reset" class="btn btn-outline-warnig" value="Nuevo" />
-                <input type="button" class="btn btn-outline-success" value="Buscar" />
+                <input onclick="abrirVentana('busqueda_alumno')" type="button" class="btn btn-outline-success" value="Buscar" />
             </div>
         </div>
     </div>
@@ -56,6 +56,10 @@
     frmAlumno.addEventListener('submit', e => {
         e.preventDefault();
         guardarAlumno();
+    });
+    frmAlumno.addEventListener('reset', e => {
+        e.preventDefault();
+        nuevoAlumno();
     });
     async function guardarAlumno() {
         let datos = {
@@ -69,13 +73,35 @@
             method = 'POST';
         if (accion == 'modificar') {
             method = 'PUT';
-            url = `https://localhost:44312/api/Alumnos\${idAlumno}`;
+            url = `https://localhost:44312/api/Alumnos/${idAlumno}`;
             datos.idAlumno = idAlumno;
         }
         const respuesta = await fetch(url, {
             method,
-            header: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(datos)
-        }), alumnos = await respuesta.json();
+        }), alumno = await respuesta.json();
+        if ((alumno?.idAlumno || 0) > 0) {
+            nuevoAlumno();
+            listarAlumnos(txtBuscarAlumno.value || '');
+        }
+    }
+    function nuevoAlumno() {
+        accion = "nuevo";
+        idAlumno = 0;
+        txtCodigoAlumno.value = "";
+        txtNombreAlumno.value = "";
+        txtDireccionAlumno.value = "";
+        txtTelefonoAlumno.value = "";
+        txtEmailAlumno.value = "";
+    }
+    function modificarAlumno(alumno) {
+        accion = "modificar";
+        idAlumno = alumno.idAlumno;
+        txtCodigoAlumno.value = alumno.codigo;
+        txtNombreAlumno.value = alumno.nombre;
+        txtDireccionAlumno.value = alumno.direccion;
+        txtTelefonoAlumno.value = alumno.telefono;
+        txtEmailAlumno.value = alumno.email;
     }
 </script>
