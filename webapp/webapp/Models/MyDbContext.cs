@@ -11,7 +11,7 @@ namespace webapp.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Alumno>().HasKey(a=>a.idAlumno);
-            modelBuilder.Entity<Materia>().HasKey(a=>a)
+            modelBuilder.Entity<Materia>().HasKey(a => a.idMateria);
         }
     }
 }

@@ -4,6 +4,6 @@ wwwroot\views\app.js
 wwwroot\views\busqueda_alumno.html
 wwwroot\views\index.html
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\alumno.html
-C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\index.html
-C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\busqueda_alumno.html
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\app.js
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\busqueda_alumno.html
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\wwwroot\views\index.html

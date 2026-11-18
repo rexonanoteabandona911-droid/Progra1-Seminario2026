@@ -25,7 +25,7 @@ function cerrarVentana() {
 }
 
 async function obtenerAlumnos(buscar = '') {
-    const respuesta = await fetch(`api/Alumnos/buscar?buscar?=${buscar}`, {
+    const respuesta = await fetch(`/api/Alumnos/buscar?buscar=${buscar}`, {
         method: "GET",
         header: { "Content-Type": "application/json" }
     }),
