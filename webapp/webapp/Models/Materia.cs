@@ -6,8 +6,8 @@ namespace webapp.Models
     {
         public int idMateria { get; set; }
 
-        public int codigo { get; set; } // Cambiado de string a int
+        public int codigo { get; set; } 
         public string nombre { get; set; }
-        public byte uv { get; set; }    // Opcional: tinyint en SQL equivale a byte en C#
+        public int uv { get; set; }    
     }
 }

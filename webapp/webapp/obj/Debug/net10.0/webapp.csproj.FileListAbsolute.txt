@@ -334,11 +334,13 @@ C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\scopedcss\bundle\webapp.styles.css
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\90ckkcozmt-{0}-hbxp78vwan-hbxp78vwan.gz
-C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\8yla8kepi5-{0}-jl8wkwc4o0-jl8wkwc4o0.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\8yla8kepi5-{0}-4fienitbtj-4fienitbtj.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\uy7f9d0jbq-{0}-jvujnuuj5j-jvujnuuj5j.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\p0vihavs68-{0}-lp6bgy5ngf-lp6bgy5ngf.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\1obysjw2lk-{0}-y1ul34u2fa-y1ul34u2fa.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\x105061u8t-{0}-s7qcdqzc5u-s7qcdqzc5u.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\s03rj8uvkt-{0}-77k9nll0kp-77k9nll0kp.gz
+C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\cwtrzoaovk-{0}-6hdrmkg04z-6hdrmkg04z.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\jd7zh339gb-{0}-pmpabpnd9a-pmpabpnd9a.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\compressed\rgxlyx6pje-{0}-o299wl1apk-o299wl1apk.gz
 C:\Users\rexon\source\repos\Progra1-Seminario2026\webapp\webapp\obj\Debug\net10.0\staticwebassets.build.json

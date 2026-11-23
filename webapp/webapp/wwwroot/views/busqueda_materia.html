@@ -1,0 +1,73 @@
+﻿<form id="frmBusquedaMateria">
+    <div class="card theme-secondary" style="min-width:700px;">
+        <div class="card-header">
+            <div class="d-flex">
+                Busqueda de Materias
+
+                <div class="ms-auto">
+                    <button data-form="busqueda_materia" type="button" class="btn-close" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table id="tblConsultaMaterias" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <input type="search" class="form-control" placeholder="Buscar materias por codigo, nombre"
+                                   name="txtBuscarMateria" id="txtBuscarMateria" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>CODIGO</th>
+                        <th>NOMBRE</th>
+                        <th>UV</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script>
+listarMaterias();
+
+txtBuscarMateria.addEventListener('keyup', e => {
+    listarMaterias(txtBuscarMateria.value);
+    });
+    async function listarMaterias(buscar='') {
+        let materias = await obtenerDatos(buscar, 'Materias'),
+            filas = '';
+        materias.forEach(materia => {
+            filas += `
+                <tr onClick='mostrarDatosMateria(${JSON.stringify(materia)})'>
+                    <td>${materia.codigo}</td>
+                    <td>${materia.nombre}</td>
+                    <td>${materia.uv}</td>
+                    <td><input type="button" onClick='eliminarMateria(${JSON.stringify(materia)}, event)'  class="btn btn-outline-danger btn-sm" value="DEL" /></td>
+                </tr>
+            `;
+        });
+        document.querySelector("#tblConsultaMaterias > tbody").innerHTML = filas;
+}
+async function eliminarMateria(materia, e) {
+    e.preventDefault();
+
+    if (confirm(`Esta seguro de eliminar ${materia.nombre.trim()}?`)) {
+        const respuesta = await fetch(`/api/Materias/${materia.idMateria}`, {
+            method: 'DELETE',
+            headers: { "Content-Type": "application/json" }
+        }), datos = await respuesta.text();
+        if (datos && datos.length > 0) {
+            alert(`Error ${datos}`);
+            return;
+        }
+        listarMaterias(txtBuscarMateria.value || '');
+    }
+
+}
+function mostrarDatosMateria(materia) {
+    modificarMateria(materia);
+}
+</script>
