@@ -1,10 +1,79 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿<form id="frmBusquedaDocente">
+    <div class="card theme-secondary" style="min-width:700px;">
+        <div class="card-header">
+            <div class="d-flex">
+                Busqueda de Docentes
 
-</body>
-</html>
+                <div class="ms-auto">
+                    <button data-form="busqueda_docente" type="button" class="btn-close" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table id="tblConsultaDocentes" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="6">
+                            <input type="search" class="form-control" placeholder="Buscar docentes por codigo, nombre"
+                                   name="txtBuscarDocente" id="txtBuscarDocente" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>CODIGO</th>
+                        <th>NOMBRE</th>
+                        <th>DIRECCION</th>
+                        <th>TELEFONO</th>
+                        <th>EMAIL</th>
+                        <th>ESCALAFON</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script>
+listarDocentes();
+
+txtBuscarDocente.addEventListener('keyup', e => {
+    listarDocentes(txtBuscarDocente.value);
+    });
+    async function listarDocentes(buscar='') {
+        let docentes = await obtenerDatos(buscar, 'Docentes'),
+            filas = '';
+        docentes.forEach(docente => {
+            filas += `
+                <tr onClick='mostrarDatosDocente(${JSON.stringify(docente)})'>
+                    <td>${docente.codigo}</td>
+                    <td>${docente.nombre}</td>
+                    <td>${docente.direccion}</td>
+                    <td>${docente.telefono}</td>
+                    <td>${docente.email}</td>
+                    <td>${docente.escalafon}</td>
+                    <td><input type="button" onClick='eliminarDocente(${JSON.stringify(docente)}, event)'  class="btn btn-outline-danger btn-sm" value="DEL" /></td>
+                </tr>
+            `;
+        });
+        document.querySelector("#tblConsultaDocentes > tbody").innerHTML = filas;
+}
+async function eliminarDocente(docente, e) {
+    e.preventDefault();
+
+    if (confirm(`Esta seguro de eliminar ${docente.nombre.trim()}?`)) {
+        const respuesta = await fetch(`/api/Docentes/${docente.idDocente}`, {
+            method: 'DELETE',
+            headers: { "Content-Type": "application/json" }
+        }), datos = await respuesta.text();
+        if (datos && datos.length > 0) {
+            alert(`Error ${datos}`);
+            return;
+        }
+        listarDocentes(txtBuscarDocente.value || '');
+    }
+
+}
+function mostrarDatosDocente(docente) {
+    modificarDocente(docente);
+}
+</script>
